@@ -5,7 +5,7 @@
 int main(){
     int alphabet[26]={0};
     int n, h;
-    char s[100];
+    char s[200000];
     scanf("%d %d", &n, &h);
     scanf("%s", s);
     int counter=1;
