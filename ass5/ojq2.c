@@ -32,7 +32,7 @@ int main(){
     // lappend(arr, 5, 'p');
     // printf("%s", arr);
 
-    char word_old[100];
+    char word_old[300000];
     scanf("%s", word_old);
     int n=strlen(word_old);
     int m;
