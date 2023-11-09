@@ -40,18 +40,20 @@ int main(){
     char word[n+m+1];
     memset(word, 0, (n+m+1)*sizeof(char));
     strcpy(word, word_old);
+    int isReversed = 0;
 
     for(int reps=0; reps<m; reps++){
         int q;
         scanf("%d", &q);
         if(q==1){
-            reverse(word, n);
+            isReversed = isReversed^1;
+
         } else {
             int l;
             char j;
             scanf("%d ", &l);
             scanf("%c", &j);
-            if(l==1){
+            if((l==1 && isReversed==0) ||(l==2 && isReversed==1)){
                 lappend(word, n, j);
             } else {
                 rappend(word, n, j);
@@ -60,6 +62,9 @@ int main(){
         }
     }
 
+    if(isReversed==1){
+        reverse(word, n);
+    }
     printf("%s\n", word);
 
 }
