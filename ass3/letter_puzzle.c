@@ -55,7 +55,6 @@ int main()
 
     qsort(sorted, t, sizeof(char*), compare);
 
-
     int counter=0;
     for(int i=1; i<t; i++){
         if(strcmp(sorted[i], sorted[i-1])!=0){
