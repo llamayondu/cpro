@@ -12,7 +12,6 @@ void reverse(char a[], int n){
     for(int i=0; i<n/2; i++){
         swap(&a[i], &a[n-i-1]);
     }
-    // a[n]='\0';
 }
 
 void lappend(char a[], int n, char c){
@@ -28,10 +27,6 @@ void rappend(char a[], int n, char c){
 }
 
 int main(){
-    // char arr[10] = {'a', 'e', 'i', 'o', 'u', '\n'};
-    // // reverse(arr, 5);
-    // lappend(arr, 5, 'p');
-    // printf("%s", arr);
 
     char word_old[100001];
     scanf("%s", word_old);
@@ -39,7 +34,6 @@ int main(){
     int m;
     scanf("%d", &m);
     char word[n+m+1];
-    // memset(word, 0, (n+m+1)*sizeof(char));
     strcpy(word, word_old);
     int isReversed = 0;
 
@@ -48,12 +42,10 @@ int main(){
         scanf("%d", &q);
         if(q==1){
             isReversed = isReversed^1;
-
         } else {
             int l;
             char j;
             scanf("%d %c", &l, &j);
-            // scanf("%c", &j);
             if((l==1 && isReversed==0) || (l==2 && isReversed==1)){
                 lappend(word, n, j);
             } else {
@@ -67,5 +59,4 @@ int main(){
         reverse(word, n);
     }
     printf("%s\n", word);
-
 }
